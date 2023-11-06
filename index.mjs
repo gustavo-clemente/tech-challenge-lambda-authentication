@@ -7,7 +7,7 @@ export const handler = async (event, context, callback) => {
     const dbClient = new DatabaseClient();
     const tokenGenerator = new TokenGenerator();
 
-    const body = event.body
+    const body = event.body ?? {}
 
     if (!body.hasOwnProperty("documento")) {
         const response = {
