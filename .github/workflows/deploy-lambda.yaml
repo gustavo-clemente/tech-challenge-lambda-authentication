@@ -29,5 +29,5 @@ jobs:
 
             - name: Deploy Code
               run: |
-                zip -j deploy.zip ./*
+                zip -r deploy.zip ./*
                 aws lambda update-function-code --function-name=customer_auth --zip-file=fileb://deploy.zip 
